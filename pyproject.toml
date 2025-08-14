@@ -102,7 +102,7 @@ markers = [
 ]
 
 [tool.coverage.run]
-source = ["c2puml"]
+source = ["python_sample_app"]
 omit = [
     "*/tests/*",
     "*/test_*",

@@ -125,7 +125,7 @@ if [ "$HAS_COVERAGE" = true ]; then
     else
         print_warning "No coverage data found. Running a simple test to generate some coverage data..."
         # Run a simple test with coverage to ensure we have some data
-        python3 -m coverage run -c "import c2puml; print('✅ Basic import test passed')" 2>/dev/null || true
+        python3 -m coverage run -c "import python_sample_app; print('✅ Basic import test passed')" 2>/dev/null || true
         # Try generating reports again
         if python3 -m coverage report &>/dev/null; then
             print_status "Generating HTML coverage reports with basic data..."
