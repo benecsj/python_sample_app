@@ -10,44 +10,13 @@ configfile: pytest.ini
 plugins: xdist-3.8.0, cov-6.2.1, mock-3.14.1, metadata-3.1.1, html-4.1.1, benchmark-5.1.0
 collecting ... collected 5 items
 
-tests/example/test_901_basic_example.py::TestBasicExample::test_basic_example FAILED [ 20%]
+tests/example/test_901_basic_example.py::TestBasicExample::test_basic_example PASSED [ 20%]
 tests/feature/test_201_cli_modes.py::TestCLIBasicRun::test_cli_basic_run PASSED [ 40%]
 tests/integration/test_301_integration.py::TestComprehensiveIntegrationCLI::test_complete_system_integration PASSED [ 60%]
 tests/integration/test_301_integration.py::TestComprehensiveIntegrationCLI::test_integration_relationships_and_formatting_comprehensive PASSED [ 80%]
 tests/unit/test_101_gen_basic.py::TestBasicOutputGeneration::test_basic_output_generation PASSED [100%]
 
-=================================== FAILURES ===================================
-_____________________ TestBasicExample.test_basic_example ______________________
-
-self = <test_901_basic_example.TestBasicExample testMethod=test_basic_example>
-
-    def test_basic_example(self):
-    	"""Run the app with external config and validate outputs"""
-    	test_data = self.data_loader.load_test_data("901_basic_example")
-    	workspace_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-    	# Run using top-level config in tests/example/config.json
-    	result = self.executor.run_full_pipeline("tests/example/config.json", workspace_root)
->   	self.cli_validator.assert_cli_success(result)
-
-tests/example/test_901_basic_example.py:24: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <tests.framework.validators.CLIValidator object at 0x7fad5c945550>
-result = CLIResult(exit_code=1, stdout='2025-08-14 05:10:50,136 - root - INFO - Using config: tests/example/config.json\n2025-0...ain.py', '--config', 'tests/example/config.json'], working_dir='/home/runner/work/python_sample_app/python_sample_app')
-message = None
-
-    def assert_cli_success(self, result: CLIResult, message: str = None) -> None:
-    	if result.exit_code != 0:
-    		error_msg = message or f"CLI execution failed with exit code {result.exit_code}"
-    		if result.stderr:
-    			error_msg += f"\nStderr: {result.stderr}"
->   		raise TestError(error_msg, context={"exit_code": result.exit_code, "stderr": result.stderr})
-E     tests.framework.validators.TestError: CLI execution failed with exit code 1
-
-tests/framework/validators.py:175: TestError
-=========================== short test summary info ============================
-FAILED tests/example/test_901_basic_example.py::TestBasicExample::test_basic_example - tests.framework.validators.TestError: CLI execution failed with exit code 1
-========================= 1 failed, 4 passed in 0.45s ==========================
+============================== 5 passed in 0.41s ===============================
 /opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/coverage/inorout.py:516: CoverageWarning: Module src/c2puml was never imported. (module-not-imported)
   self.warn(f"Module {pkg} was never imported.", slug="module-not-imported")
 /opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/coverage/control.py:943: CoverageWarning: No data was collected. (no-data-collected)
