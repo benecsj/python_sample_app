@@ -1,14 +1,9 @@
 ### Working Context for Future Sessions (AI Assistant)
 
-This project is a Python tool that converts C/C++ codebases into PlantUML diagrams. Keep these principles and workflows in mind for all future work in this repository.
+This project is a Sample Python tool
 
 ## Project Overview
-- Pipeline steps:
-  1) Parse C/C++ files → model.json
-  2) Verify model sanity
-  3) Transform model based on configuration
-  4) Generate PlantUML files
-- Priorities: test-driven development, single responsibility per file, modern Python packaging via pyproject.toml, concise practical docs.
+This is a sample python project
 
 ## Code Style & Quality
 - Naming: variables/functions snake_case; classes PascalCase
@@ -29,7 +24,6 @@ This project is a Python tool that converts C/C++ codebases into PlantUML diagra
   - ./scripts/run_all_tests.sh (main test run)
   - ./scripts/run_example.sh (integration/example)
   - ./scripts/run_all.sh (full regression incl. PNG generation)
-  - ./scripts/picgen.sh (PlantUML → PNG)
 - TDD loop:
   1) Write failing test for requirement/bug
   2) Implement minimal solution
