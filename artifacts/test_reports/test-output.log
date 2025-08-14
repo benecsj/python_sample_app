@@ -8,15 +8,14 @@ benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=
 rootdir: /home/runner/work/python_sample_app/python_sample_app
 configfile: pytest.ini
 plugins: xdist-3.8.0, cov-6.2.1, mock-3.14.1, metadata-3.1.1, html-4.1.1, benchmark-5.1.0
-collecting ... collected 5 items
+collecting ... collected 4 items
 
-tests/example/test_901_basic_example.py::TestBasicExample::test_basic_example PASSED [ 20%]
-tests/feature/test_201_cli_modes.py::TestCLIBasicRun::test_cli_basic_run PASSED [ 40%]
-tests/integration/test_301_integration.py::TestComprehensiveIntegrationCLI::test_complete_system_integration PASSED [ 60%]
-tests/integration/test_301_integration.py::TestComprehensiveIntegrationCLI::test_integration_relationships_and_formatting_comprehensive PASSED [ 80%]
+tests/example/test_901_basic_example.py::TestBasicExample::test_basic_example PASSED [ 25%]
+tests/feature/test_201_cli_modes.py::TestCLIBasicRun::test_cli_basic_run PASSED [ 50%]
+tests/integration/test_301_integration.py::TestComprehensiveIntegrationCLI::test_complete_system_integration PASSED [ 75%]
 tests/unit/test_101_gen_basic.py::TestBasicOutputGeneration::test_basic_output_generation PASSED [100%]
 
-============================== 5 passed in 0.41s ===============================
+============================== 4 passed in 0.34s ===============================
 /opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/coverage/inorout.py:516: CoverageWarning: Module src/c2puml was never imported. (module-not-imported)
   self.warn(f"Module {pkg} was never imported.", slug="module-not-imported")
 /opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/coverage/control.py:943: CoverageWarning: No data was collected. (no-data-collected)
