@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Minimal standalone wrapper for c2puml
+Minimal standalone wrapper for python_sample_app
 """
 
 import sys
@@ -12,9 +12,9 @@ src_dir = current_dir / "src"
 if src_dir.exists():
     sys.path.insert(0, str(src_dir))
 else:
-    print("Error: src directory not found. Make sure this script is in the root directory of the c2puml project.")
+    print("Error: src directory not found. Make sure this script is in the root directory of the python_sample_app project.")
     sys.exit(1)
 
 # Import and run the main function
-from c2puml.main import main
+from python_sample_app.main import main
 sys.exit(main())

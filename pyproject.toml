@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "c2puml"
+name = "python_sample_app"
 version = "3.0.0"
 description = "Convert C/C++ code to PlantUML diagrams with advanced filtering and transformation capabilities"
 readme = "README.md"
@@ -34,19 +34,19 @@ dependencies = []
 keywords = ["c", "cpp", "plantuml", "uml", "diagram", "code-generation", "documentation"]
 
 [project.urls]
-Homepage = "https://github.com/fischerjooo/c2puml"
-Repository = "https://github.com/fischerjooo/c2puml"
-Issues = "https://github.com/fischerjooo/c2puml/issues"
-Documentation = "https://fischerjooo.github.io/c2puml"
-"Download ZIP" = "https://github.com/fischerjooo/c2puml/archive/refs/heads/release.zip"
-"Download TAR.GZ" = "https://github.com/fischerjooo/c2puml/archive/refs/heads/release.tar.gz"
+Homepage = "https://github.com/fischerjooo/python_sample_app"
+Repository = "https://github.com/fischerjooo/python_sample_app"
+Issues = "https://github.com/fischerjooo/python_sample_app/issues"
+Documentation = "https://fischerjooo.github.io/python_sample_app"
+"Download ZIP" = "https://github.com/fischerjooo/python_sample_app/archive/refs/heads/release.zip"
+"Download TAR.GZ" = "https://github.com/fischerjooo/python_sample_app/archive/refs/heads/release.tar.gz"
 
 [project.scripts]
-c2puml = "c2puml.main:main"
+python_sample_app = "python_sample_app.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["c2puml*"]
+include = ["python_sample_app*"]
 
 [tool.setuptools.package-dir]
 "" = "src"
@@ -65,14 +65,14 @@ extend-exclude = '''
   | \.venv
   | build
   | dist
-  | c2puml\.egg-info
+  | python_sample_app\.egg-info
 )/
 '''
 
 [tool.isort]
 profile = "black"
 line_length = 88
-known_first_party = ["c2puml"]
+known_first_party = ["python_sample_app"]
 skip_glob = [
     "build/*",
     "dist/*",
@@ -102,7 +102,7 @@ markers = [
 ]
 
 [tool.coverage.run]
-source = ["c2puml"]
+source = ["python_sample_app"]
 omit = [
     "*/tests/*",
     "*/test_*",
