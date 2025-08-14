@@ -1,17 +1,18 @@
 {
     "folders": [
         {
-            "name": "C to PlantUML Converter",
+            "name": "Sample Python Project",
             "path": "."
         }
     ],
     "settings": {
-        "workbench.colorCustomizations": {
-            "titleBar.activeBackground": "#254d24",
-            "titleBar.activeForeground": "#ffffff",
-            "titleBar.inactiveBackground": "#1c3a1c",
-            "titleBar.inactiveForeground": "#cccccc"
-        },
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#660000",
+			"titleBar.activeForeground": "#ffffff",
+			"titleBar.inactiveBackground": "#330000",
+			"titleBar.inactiveForeground": "#999999"
+		},
+		"forbeslindesay-taskrunner.source": "Workspace",
         // General settings
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
