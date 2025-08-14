@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "python_sample_app"
-version = "3.0.0"
-description = "Convert C/C++ code to PlantUML diagrams with advanced filtering and transformation capabilities"
+version = "1.0.0"
+description = "This is a sample Python tool"
 readme = "README.md"
 authors = [
     {name = "C to PlantUML Team", email = "fischerjooo@users.noreply.github.com"}
@@ -96,7 +96,7 @@ addopts = [
 ]
 markers = [
     "unit: Unit tests",
-    "feature: Feature tests", 
+    "feature: Feature tests",
     "integration: Integration tests",
     "slow: Slow running tests"
 ]
