@@ -23,6 +23,9 @@ jobs:
       pages: write
       id-token: write
       actions: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     concurrency:
       group: "deploy-website"
@@ -125,6 +128,7 @@ jobs:
         path: docs/
 
     - name: "03.05 Deploy to GitHub Pages"
+      id: deployment
       uses: actions/deploy-pages@v4
 
     - name: "03.06 Deployment summary"
