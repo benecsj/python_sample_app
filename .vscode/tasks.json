@@ -2,12 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "# Run Full Workflow",
+            "label": "# Run All",
             "type": "shell",
             "command": "${workspaceFolder}/scripts/run_all.bat",
-            "args": [
-                "${config:plantumlPath}"
-            ],
             "group": "build",
             "presentation": {
                 "echo": true,
@@ -41,28 +38,7 @@
             }
         },
         {
-            "label": "# Generate Pictures",
-            "type": "shell",
-            "command": "${workspaceFolder}/scripts/picgen.bat",
-            "args": [
-                "${config:plantumlPath}"
-            ],
-            "group": "build",
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": false,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            },
-            "problemMatcher": [],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            }
-        },
-        {
-            "label": "# Run Tests",
+            "label": "# Run All Tests",
             "type": "shell",
             "command": "${workspaceFolder}/scripts/run_all_tests.bat",
             "group": "test",

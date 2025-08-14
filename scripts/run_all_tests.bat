@@ -10,8 +10,8 @@ echo Script directory: %SCRIPT_DIR%
 
 REM Run mapping validation first
 echo 🔎 Pre-check: Validating tests mapping rules...
-pushd "%SCRIPT_DIR%.."
-python scripts\check_tests_mapping.py
+pushd "%SCRIPT_DIR%"
+python check_tests_mapping.py
 if not %errorlevel%==0 (
     echo ❌ Test mapping validation failed.
     popd
