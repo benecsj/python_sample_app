@@ -155,7 +155,7 @@ def run_pytest_tests(
     if with_coverage:
         cmd.extend(
             [
-                "--cov=c2puml",
+                "--cov=python_sample_app",
                 "--cov-report=term-missing",
                 "--cov-report=html:htmlcov",
                 "--cov-fail-under=80",

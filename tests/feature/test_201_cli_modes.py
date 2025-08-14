@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test CLI Modes Comprehensive (Consolidated)
+Feature test: CLI basic run
 """
 
 import os
@@ -11,14 +11,14 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 from tests.framework import UnifiedTestCase
 
 
-class TestCLIModesComprehensive(UnifiedTestCase):
-    """Test CLI modes functionality through the CLI interface (single scenario)"""
+class TestCLIBasicRun(UnifiedTestCase):
+	"""Test CLI run and output generation"""
 
-    def test_cli_modes_and_features_comprehensive(self):
-        result = self.run_test("201_cli_modes")
-        self.validate_execution_success(result)
-        # Assertions are handled in YAML; only success required here
+	def test_cli_basic_run(self):
+		result = self.run_test("201_cli_modes")
+		self.validate_execution_success(result)
+		self.validate_test_output(result)
 
 
 if __name__ == "__main__":
-    unittest.main()
+	unittest.main()

@@ -1,32 +1,28 @@
 test:
-  name: Basic PlantUML Generation
-  description: Test basic PlantUML generation with structs, enums, functions, globals, includes, macros, and typedefs
+  name: Basic output generation
+  description: Validate output.txt creation and content
   category: unit
   id: '101'
 ---
 source_files:
-  main.c: |
-    #include <stdio.h>
-    int main() { return 0; }
+  note.txt: |
+    example content not used by app
 ---
 config.json: |
   {
-    "project_name": "test_generator_basic_plantuml",
-    "source_folders": ["."],
-    "output_dir": "./output",
-    "recursive_search": true
+    "test": "Hello World",
+    "output_dir": "./output"
   }
 ---
 assertions:
   execution:
     exit_code: 0
-    output_files:
-      - model.json
-      - model_transformed.json
-      - main.puml
-  puml:
-    syntax_valid: true
-    files:
-      main.puml:
-        contains_lines:
-          - "- int main()"
+    max_execution_time: 10.0
+  files:
+    output_dir_exists: ./output
+    files_exist:
+      - ./output/output.txt
+    file_content:
+      ./output/output.txt:
+        contains: ["Hello World"]
+        line_count: 1

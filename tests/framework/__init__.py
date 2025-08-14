@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-Unified Testing Framework for C2PUML
+Unified Testing Framework (generic)
 
-This package provides a comprehensive testing framework for C2PUML tests,
-including CLI execution, YAML-based test data, and validation components.
+Provides CLI execution, YAML-based test data loading, and generic validators.
 """
 
 from .base import UnifiedTestCase, TestResult
@@ -11,25 +10,21 @@ from .data_loader import TestDataLoader
 from .executor import TestExecutor, CLIResult
 from .validators_processor import ValidatorsProcessor
 from .validators import (
-    ModelValidator, 
-    PlantUMLValidator, 
-    OutputValidator, 
-    FileValidator, 
-    CLIValidator,
-    TestError
+	OutputValidator,
+	FileValidator,
+	CLIValidator,
+	TestError
 )
 
 __all__ = [
-    'UnifiedTestCase',
-    'TestResult', 
-    'TestDataLoader',
-    'TestExecutor',
-    'CLIResult',
-    'ValidatorsProcessor',
-    'ModelValidator',
-    'PlantUMLValidator', 
-    'OutputValidator',
-    'FileValidator',
-    'CLIValidator',
-    'TestError'
+	'UnifiedTestCase',
+	'TestResult',
+	'TestDataLoader',
+	'TestExecutor',
+	'CLIResult',
+	'ValidatorsProcessor',
+	'OutputValidator',
+	'FileValidator',
+	'CLIValidator',
+	'TestError'
 ]

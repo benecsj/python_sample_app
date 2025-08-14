@@ -1,45 +1,28 @@
 test:
-  name: CLI Modes and Features – Comprehensive
-  description: Validate CLI workflow via full pipeline; ensure parsing headers, model creation, and PlantUML generation are correct for a minimal project
+  name: CLI basic run
+  description: Validate CLI run and output.txt content
   category: feature
   id: '201'
 ---
 source_files:
-  a.c: |
-    #include "a.h"
-    int main() { return 0; }
-  a.h: |
-    #ifndef A_H
-    #define A_H
-    int foo(void);
-    #endif
+  readme.txt: |
+    feature scenario note
 ---
 config.json: |
   {
-    "project_name": "cli_modes_and_features",
-    "source_folders": ["."],
-    "output_dir": "./output",
-    "recursive_search": true
+    "test": "Feature Run",
+    "output_dir": "./output"
   }
 ---
 assertions:
   execution:
     exit_code: 0
     max_execution_time: 30.0
-  model:
-    validate_structure: true
-    expected_files:
-      - a.c
-      - a.h
-    functions_exist:
-      - main
-      - foo
-    includes_exist:
-      - a.h
-  puml:
-    syntax_valid: true
   files:
     output_dir_exists: ./output
     files_exist:
-      - ./output/model.json
-      - ./output/model_transformed.json
+      - ./output/output.txt
+    file_content:
+      ./output/output.txt:
+        contains: ["Feature Run"]
+        line_count: 1
