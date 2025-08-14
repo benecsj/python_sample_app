@@ -67,6 +67,7 @@ Thumbs.db
 !test_model.json
 !tests/example/config.json
 !artifacts/output_example/*.json
+!.vscode/*.json
 !tests/unit/test_*.yml
 !tests/feature/test_*.yml
 !tests/integration/test_*.yml
